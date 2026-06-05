@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulador de examen · Psicoanálisis</title>
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+<header>
+  <a class="backlink" href="index.html">← Inicio</a>
+  <div class="eyebrow">Simulacro</div>
+  <h1>Simulador de examen final</h1>
+  <p>Arma un examen mezclando preguntas al azar de <b>las 11 clases</b> + una <b>consigna de
+  desarrollo</b> integradora. Respondé <b>de memoria y por escrito</b> antes de abrir cada
+  respuesta. Recordá los dos criterios del profe: <b>redactar extendido</b> y <b>conectar</b>.</p>
+</header>
+
+<div class="wrap" style="padding-top:18px">
+  <div class="studybar">
+    <label class="toggle-wrap">Cantidad de preguntas cortas:
+      <select id="nq" style="background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 10px">
+        <option value="8">8</option><option value="12" selected>12</option><option value="16">16</option>
+      </select>
+    </label>
+    <button class="btn-reveal" id="nuevo">📝 Nuevo examen</button>
+    <button class="btn-reveal" id="cron">⏱️ Iniciar cronómetro</button>
+    <span id="reloj" class="big" style="display:none">00:00</span>
+  </div>
+  <p class="meta">Sugerencia: poné el cronómetro, no abras ninguna respuesta hasta terminar de
+  escribir todo, y recién ahí corregí con las soluciones.</p>
+  <div id="examen" style="margin-top:16px"></div>
+</div>
+
+<footer>Simulador de examen · <a href="index.html">inicio</a> · <a href="practica.html">práctica intercalada</a> · <a href="progreso.html">mi progreso</a></footer>
+
+<script src="js/banco.js" defer></script>
+<script src="js/estudio.js" defer></script>
+<script defer>
+  document.addEventListener("DOMContentLoaded", function () {
+    function go(){ window.PSA.renderExam("examen", parseInt(document.getElementById("nq").value,10)); }
+    go();
+    document.getElementById("nuevo").addEventListener("click", go);
+    document.getElementById("nq").addEventListener("change", go);
+    // cronómetro simple
+    var secs=0, timer=null, reloj=document.getElementById("reloj"), btn=document.getElementById("cron");
+    btn.addEventListener("click", function(){
+      if(timer){ clearInterval(timer); timer=null; btn.textContent="⏱️ Iniciar cronómetro"; return; }
+      reloj.style.display="inline"; btn.textContent="⏸️ Pausar";
+      timer=setInterval(function(){ secs++; var m=Math.floor(secs/60), s=secs%60;
+        reloj.textContent=(m<10?"0":"")+m+":"+(s<10?"0":"")+s; }, 1000);
+    });
+  });
+</script>
+</body>
+</html>

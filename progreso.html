@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi progreso · Psicoanálisis</title>
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+<header>
+  <a class="backlink" href="index.html">← Inicio</a>
+  <div class="eyebrow">Metacognición</div>
+  <h1>Mi progreso</h1>
+  <p>Tu nivel de <b>dominio</b> por clase (según cómo venís marcando las flashcards) y cuántas
+  tarjetas tenés <b>pendientes de repasar</b> hoy. Esto vive solo en este navegador
+  (<code>localStorage</code>): es tu termómetro privado de qué controlás y qué falta.</p>
+</header>
+
+<div class="wrap" style="padding-top:18px">
+  <div id="dash"></div>
+  <div class="callout" style="margin-top:20px">
+    <b>Cómo leerlo:</b> el % sube cuando marcás "Lo sé" (la tarjeta avanza de caja); baja a
+    "pendiente" cuando una tarjeta vence o la marcás "No lo sé". Apuntá a tener <b>0
+    pendientes</b> y el dominio alto en cada clase antes del examen.
+  </div>
+  <button class="btn-grade g-no" id="reset" style="margin-top:16px;flex:0 0 auto">Reiniciar mi progreso</button>
+  <p class="meta">(Solo borra tus marcas de estudio de este navegador; no toca el contenido.)</p>
+</div>
+
+<footer>Mi progreso · <a href="index.html">inicio</a> · <a href="practica.html">práctica intercalada</a></footer>
+
+<script src="js/estudio.js" defer></script>
+<script defer>
+  document.addEventListener("DOMContentLoaded", function () {
+    window.PSA.renderDashboard("dash");
+    document.getElementById("reset").addEventListener("click", function () {
+      if (confirm("¿Borrar todas tus marcas de estudio (flashcards y notas)?")) {
+        localStorage.removeItem("psa.srs");
+        localStorage.removeItem("psa.expl");
+        window.PSA.renderDashboard("dash");
+      }
+    });
+  });
+</script>
+</body>
+</html>

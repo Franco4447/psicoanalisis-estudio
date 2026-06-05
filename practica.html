@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Práctica intercalada · Psicoanálisis</title>
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+<header>
+  <a class="backlink" href="index.html">← Inicio</a>
+  <div class="eyebrow">Práctica</div>
+  <h1>Práctica intercalada</h1>
+  <p>Preguntas <b>mezcladas entre clases</b>, en orden aleatorio. Practicar salteado
+  (interleaving) entrena lo que el examen realmente pide: <b>distinguir y articular</b>
+  conceptos que estudiaste por separado. Intentá responder antes de abrir cada respuesta.</p>
+</header>
+
+<div class="wrap" style="padding-top:18px">
+  <button class="btn-reveal" id="reshuffle">🔀 Mezclar de nuevo</button>
+  <div id="practica" style="margin-top:16px"></div>
+  <p class="meta">A medida que se completen más clases, aparecerán más preguntas de otros
+  ejes en esta mezcla.</p>
+</div>
+
+<footer>Práctica intercalada · <a href="index.html">inicio</a> · <a href="progreso.html">mi progreso</a></footer>
+
+<script src="js/banco.js" defer></script>
+<script src="js/estudio.js" defer></script>
+<script defer>
+  document.addEventListener("DOMContentLoaded", function () {
+    function go(){ window.PSA.renderPractice("practica"); }
+    go();
+    document.getElementById("reshuffle").addEventListener("click", go);
+  });
+</script>
+</body>
+</html>

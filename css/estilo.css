@@ -1,0 +1,240 @@
+/* ===========================================================
+   Estilo compartido — Sitio de estudio Psicoanálisis (Freud ↔ Lacan)
+   Convención de color: Freud = ámbar · Lacan = índigo · Psicosis/transversal = verde
+   =========================================================== */
+:root{
+  --bg:#0f1117; --panel:#171a24; --panel2:#1e2230; --ink:#e7e9ee; --muted:#9aa3b2;
+  --line:#2a2f3e; --freud:#e0a458; --freud-soft:#332a1a; --lacan:#8c92ff;
+  --lacan-soft:#23264a; --accent:#5ad1c9; --trans:#46c98b; --warn:#ff8a8a;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.55;font-size:16px}
+a{color:var(--accent)}
+
+/* ---------- Header ---------- */
+header{padding:30px 24px 18px;border-bottom:1px solid var(--line);
+  background:radial-gradient(120% 120% at 0% 0%,#1a1f30,#0f1117)}
+.eyebrow{color:var(--accent);letter-spacing:.14em;text-transform:uppercase;
+  font-size:.72rem;font-weight:700}
+header h1{margin:.25em 0 .15em;font-size:1.9rem}
+header p{margin:0;color:var(--muted);max-width:78ch}
+.backlink{display:inline-block;margin-bottom:10px;font-size:.85rem;color:var(--muted)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px;font-size:.8rem}
+.legend span{display:inline-flex;align-items:center;gap:6px;color:var(--muted)}
+.dot{width:12px;height:12px;border-radius:3px;display:inline-block}
+
+/* ---------- Layout ---------- */
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h2{margin-top:0;border-left:4px solid var(--accent);padding-left:12px}
+h3{color:var(--accent)}
+.meta{color:var(--muted);font-size:.85rem}
+footer{color:var(--muted);font-size:.8rem;text-align:center;padding:22px}
+
+/* ---------- Tabs ---------- */
+nav.tabs{display:flex;gap:6px;flex-wrap:wrap;max-width:1080px;margin:0 auto;padding:14px 24px 0}
+nav.tabs button{background:var(--panel);color:var(--muted);border:1px solid var(--line);
+  border-bottom:none;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;
+  font-size:.92rem;font-weight:600}
+nav.tabs button.active{background:var(--panel2);color:var(--ink);box-shadow:inset 0 2px 0 var(--accent)}
+section.tab{display:none;background:var(--panel2);border:1px solid var(--line);
+  border-radius:0 12px 12px 12px;padding:24px;margin:0 0 40px}
+section.tab.active{display:block}
+
+/* ---------- Chips ---------- */
+.chip{display:inline-block;padding:2px 9px;border-radius:999px;font-size:.7rem;font-weight:700;
+  background:var(--panel);color:var(--muted);border:1px solid var(--line)}
+.chip.freud{background:var(--freud-soft);color:var(--freud);border:1px solid var(--freud)}
+.chip.lacan{background:var(--lacan-soft);color:var(--lacan);border:1px solid var(--lacan)}
+.chip.trans{background:#143027;color:var(--trans);border:1px solid var(--trans)}
+
+/* ---------- Eje rows (mapa maestro) ---------- */
+.eje{margin:22px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel)}
+.eje-head{padding:12px 18px;background:#141826;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.eje-head .num{font-size:1.5rem;font-weight:800;color:var(--accent)}
+.eje-head .ttl{font-weight:700;font-size:1.05rem}
+.eje-head .sub{color:var(--muted);font-size:.85rem}
+.flow{display:flex;align-items:stretch;gap:0;flex-wrap:wrap;padding:16px 18px}
+.clase{flex:1 1 200px;min-width:190px;background:var(--panel2);border:1px solid var(--line);
+  border-radius:12px;padding:12px 14px;cursor:pointer;transition:.15s;margin:4px;
+  text-decoration:none;color:inherit;display:block}
+.clase:hover{transform:translateY(-3px);border-color:var(--accent)}
+.clase.freud{border-top:3px solid var(--freud)}
+.clase.lacan{border-top:3px solid var(--lacan)}
+.clase .cn{font-size:.72rem;font-weight:700;letter-spacing:.05em}
+.clase.freud .cn{color:var(--freud)} .clase.lacan .cn{color:var(--lacan)}
+.clase h4{margin:.25em 0 .35em;font-size:.98rem}
+.clase .anchors{display:none;margin-top:8px;border-top:1px dashed var(--line);padding-top:8px;
+  color:var(--muted);font-size:.84rem}
+.clase.open .anchors{display:block}
+.clase .toggle{color:var(--accent);font-size:.74rem}
+.clase .status{font-size:.7rem;color:var(--muted);margin-top:6px}
+.clase .status.ready{color:var(--trans)}
+.arrow{align-self:center;color:var(--muted);font-size:1.4rem;padding:0 2px;user-select:none}
+.transbar{margin:10px 4px;padding:14px 16px;border:1px dashed var(--trans);border-radius:12px;
+  background:#0f231c}
+.transbar b{color:var(--trans)}
+
+/* ---------- Concept map (per-class) ---------- */
+.map{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0}
+.node{flex:1 1 220px;background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px;cursor:pointer;transition:.15s}
+.node:hover{transform:translateY(-2px);border-color:var(--accent)}
+.node.freud{border-top:3px solid var(--freud)}
+.node.lacan{border-top:3px solid var(--lacan)}
+.node h4{margin:.1em 0 .3em}
+.node .detail{display:none;color:var(--muted);font-size:.9rem;margin-top:8px;
+  border-top:1px dashed var(--line);padding-top:8px}
+.node.open .detail{display:block}
+.node .hint{color:var(--accent);font-size:.75rem}
+
+/* ---------- Tables / bridges ---------- */
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:#141826;color:var(--accent)}
+tr.bridge{cursor:pointer;transition:.12s}
+tr.bridge:hover td{background:#202637}
+tr.bridge.active td{background:var(--lacan-soft)}
+td.f{color:var(--freud)} td.l{color:var(--lacan)}
+.where{color:var(--muted);font-size:.82rem;white-space:nowrap}
+
+/* ---------- School cards / generic cards ---------- */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:16px}
+.school{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
+.school.fr{border-top:3px solid var(--lacan)}
+.school h3{margin:.1em 0 .4em}
+.school .ref{color:var(--muted);font-size:.85rem}
+
+/* ---------- Callout / traps ---------- */
+.callout{border-left:4px solid var(--warn);background:#241a1a;padding:12px 16px;border-radius:8px;margin:16px 0}
+.traps li{margin:8px 0}
+
+/* ---------- Flashcards ---------- */
+.deck{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  min-height:150px;cursor:pointer;perspective:1000px}
+.card .inner{position:relative;width:100%;height:100%;min-height:150px;
+  transition:transform .5s;transform-style:preserve-3d}
+.card.flipped .inner{transform:rotateY(180deg)}
+.card .face{position:absolute;inset:0;backface-visibility:hidden;padding:16px;
+  display:flex;align-items:center;justify-content:center;text-align:center}
+.card .back{transform:rotateY(180deg);color:var(--muted);font-size:.92rem;flex-direction:column;gap:6px}
+.card .front{font-weight:700}
+.card .tag{position:absolute;top:8px;left:8px;font-size:.65rem}
+
+/* ---------- Quiz ---------- */
+.q{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:12px 0}
+.q .ask{font-weight:600}
+details summary{cursor:pointer;color:var(--accent);margin-top:8px;font-size:.9rem}
+details[open] summary{margin-bottom:6px}
+
+/* ---------- Index hub ---------- */
+.hub{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:18px}
+.hubcard{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;
+  text-decoration:none;color:inherit;transition:.15s;display:block}
+.hubcard:hover{transform:translateY(-3px);border-color:var(--accent)}
+.hubcard.freud{border-left:4px solid var(--freud)}
+.hubcard.lacan{border-left:4px solid var(--lacan)}
+.hubcard.special{border-left:4px solid var(--accent)}
+.hubcard .cn{font-size:.72rem;font-weight:700;letter-spacing:.05em;color:var(--muted)}
+.hubcard h3{margin:.2em 0 .3em;color:var(--ink)}
+.hubcard .st{font-size:.74rem;color:var(--muted)}
+.hubcard .st.ready{color:var(--trans)}
+
+/* ---------- Prose (Resumen tab) ---------- */
+.prose{max-width:74ch}
+.prose h3{margin-top:1.4em}
+.prose blockquote{border-left:3px solid var(--accent);margin:1em 0;padding:.2em 1em;
+  color:var(--muted);background:var(--panel)}
+.prose code{background:var(--panel);padding:1px 6px;border-radius:5px;font-size:.9em}
+
+/* ================= UPGRADES PEDAGÓGICOS ================= */
+
+/* ---------- Flashcards: recuerdo activo + SRS (reemplaza el flip) ---------- */
+.deck{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  min-height:auto;cursor:default;perspective:none;padding:14px 16px;display:flex;
+  flex-direction:column;gap:8px}
+.card .q{font-weight:700}
+.card .a{display:none;color:var(--muted);font-size:.92rem;border-top:1px dashed var(--line);
+  padding-top:8px}
+.card[data-box]{position:relative}
+.card[data-box]::after{content:"";position:absolute;top:10px;right:10px;width:8px;height:8px;
+  border-radius:50%;background:var(--line)}
+.card[data-box="1"]::after,.card[data-box="2"]::after{background:var(--warn)}
+.card[data-box="3"]::after{background:var(--freud)}
+.card[data-box="4"]::after,.card[data-box="5"]::after{background:var(--trans)}
+.card-ctrl{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+.btn-reveal{background:var(--panel2);color:var(--ink);border:1px solid var(--line);
+  border-radius:8px;padding:7px 12px;cursor:pointer;font-size:.85rem;font-weight:600}
+.btn-reveal:hover{border-color:var(--accent)}
+.btn-grade{border:1px solid var(--line);border-radius:8px;padding:7px 12px;cursor:pointer;
+  font-size:.82rem;font-weight:700;flex:1}
+.g-no{background:#2a1717;color:var(--warn);border-color:var(--warn)}
+.g-casi{background:#2a2417;color:var(--freud);border-color:var(--freud)}
+.g-si{background:#13261d;color:var(--trans);border-color:var(--trans)}
+
+/* ---------- Barra de dominio + badges + toggle ---------- */
+.studybar{display:flex;align-items:center;gap:16px;flex-wrap:wrap;background:var(--panel);
+  border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:10px 0 4px}
+.studybar .big{font-size:1.4rem;font-weight:800;color:var(--accent)}
+.mastery-bar{flex:1;min-width:140px;height:10px;background:#0c0e14;border:1px solid var(--line);
+  border-radius:999px;overflow:hidden}
+.mastery-bar span{display:block;height:100%;background:linear-gradient(90deg,var(--freud),var(--trans));
+  width:0;transition:width .4s}
+.toggle-wrap{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;color:var(--muted)}
+
+/* ---------- Diagramas reales (CSS) ---------- */
+.diagram{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;
+  margin:16px 0}
+.diagram .dtitle{font-weight:700;color:var(--accent);margin-bottom:12px}
+.dflow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.dbox{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:10px 14px;
+  font-size:.9rem;text-align:center;flex:1;min-width:120px}
+.dbox.freud{border-top:3px solid var(--freud)} .dbox.lacan{border-top:3px solid var(--lacan)}
+.dbox b{display:block}
+.dbox small{color:var(--muted)}
+.darrow{color:var(--accent);font-size:1.4rem;font-weight:700;flex:0 0 auto}
+.darrow.lbl{display:flex;flex-direction:column;align-items:center;font-size:.7rem;color:var(--muted);font-weight:600}
+.darrow.lbl span{font-size:1.4rem;color:var(--accent)}
+.dbranches{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+.dbranch{flex:1 1 150px;background:var(--panel2);border:1px solid var(--line);border-radius:10px;
+  padding:10px 12px;font-size:.85rem;border-top:3px solid var(--line)}
+.dbranch h5{margin:.1em 0 .3em}
+.dnote{color:var(--muted);font-size:.82rem;margin-top:10px}
+/* tríada ISR */
+.triad{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.triad .t{flex:1 1 160px;border-radius:12px;padding:12px;text-align:center;border:1px solid var(--line)}
+.triad .t.i{background:rgba(140,146,255,.08);border-top:3px solid var(--lacan)}
+.triad .t.s{background:rgba(90,209,201,.08);border-top:3px solid var(--accent)}
+.triad .t.r{background:rgba(70,201,139,.08);border-top:3px solid var(--trans)}
+
+/* ---------- Ejemplo trabajado paso a paso ---------- */
+.steps{counter-reset:step;list-style:none;padding:0}
+.steps li{position:relative;background:var(--panel);border:1px solid var(--line);
+  border-radius:10px;padding:12px 16px 12px 48px;margin:10px 0}
+.steps li::before{counter-increment:step;content:counter(step);position:absolute;left:12px;top:12px;
+  width:24px;height:24px;border-radius:50%;background:var(--accent);color:#0f1117;font-weight:800;
+  display:flex;align-items:center;justify-content:center;font-size:.85rem}
+
+/* ---------- Auto-explicación ---------- */
+.selfexpl-wrap{background:#0f231c;border:1px dashed var(--trans);border-radius:10px;padding:12px 16px;margin:14px 0}
+.selfexpl-wrap label{display:block;color:var(--trans);font-weight:700;font-size:.9rem;margin-bottom:6px}
+textarea.selfexpl{width:100%;min-height:80px;background:var(--bg);color:var(--ink);
+  border:1px solid var(--line);border-radius:8px;padding:10px;font-family:inherit;font-size:.92rem;resize:vertical}
+.selfexpl-wrap .hint{color:var(--muted);font-size:.78rem;margin-top:6px}
+
+/* ---------- Rúbrica ---------- */
+.rubric{background:#13261d;border-left:4px solid var(--trans);border-radius:8px;padding:10px 14px;margin-top:8px}
+.rubric b{color:var(--trans)}
+.rubric ul{margin:.4em 0 0;padding-left:1.2em}
+
+/* ---------- Tablero de progreso ---------- */
+.dash-row{display:grid;grid-template-columns:1fr 160px 110px;gap:14px;align-items:center;
+  background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 16px;
+  margin:8px 0;text-decoration:none;color:inherit}
+.dash-row:hover{border-color:var(--accent)}
+.dash-name{font-weight:600}
+.dash-num{text-align:right;font-size:.85rem;color:var(--muted)}
+.dash-num b{color:var(--accent)}
+@media(max-width:640px){.dash-row{grid-template-columns:1fr;gap:6px}.dash-num{text-align:left}}
