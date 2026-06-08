@@ -214,7 +214,27 @@ window.BANCO = [
     a: "Ego Psychology: yo fuerte/adaptativo (meta: adaptación). Lacan: yo imaginario/desconocimiento; la adaptación es 'conformismo social'. Cierra el contraste de C1." },
   { clase: "c11", tags: ["articulación", "c09", "sintesis"],
     q: "¿De qué clase freudiana es relectura directa el estadio del espejo?",
-    a: "De C9 (narcisismo): \"el yo es una imagen que viene del Otro\" + \"antes hay un cuerpo fragmentado\". Es la tercera 'cosecha' lacaniana (junto a C4 y C7)." }
+    a: "De C9 (narcisismo): \"el yo es una imagen que viene del Otro\" + \"antes hay un cuerpo fragmentado\". Es la tercera 'cosecha' lacaniana (junto a C4 y C7)." },
+
+  // ---------------- Transversal · Psicosis (Belucci 4) ----------------
+  { clase: "psi", tags: ["psicosis"],
+    q: "¿Qué es la 'cuestión preliminar' y por qué es previa al tratamiento?",
+    a: "La posición de la psicosis respecto de la <b>estructura</b>. Lo conceptual y lo clínico están en continuidad topológica: <b>sin cuestión preliminar no hay tratamiento posible</b>." },
+  { clase: "psi", tags: ["psicosis", "freud"],
+    q: "¿Por qué Freud consideraba 'no analizables' las neurosis narcisistas?",
+    a: "Porque (supuestamente) <b>no hay transferencia</b>: la libido se retira de los objetos. Usó 'psicosis' desde 1924; Lacan retoma en 1958." },
+  { clase: "psi", tags: ["psicosis", "estructura", "trampa"],
+    q: "Diferenciá 'estructura' (singular) de 'estructuras clínicas' (plural).",
+    a: "Estructura = el matema del <b>Otro barrado (Ⱥ)</b>. Estructuras clínicas = neurosis, perversión y psicosis (no reductibles; sin pasaje): son <b>posiciones</b> respecto de la falta." },
+  { clase: "psi", tags: ["psicosis", "c07"],
+    q: "¿Qué define a la psicosis respecto del Padre?",
+    a: "El <b>operador paterno no está en funciones</b>: la <b>forclusión del Nombre-del-Padre</b> (fracaso de la metáfora paterna, C7)." },
+  { clase: "psi", tags: ["psicosis", "c04"],
+    q: "¿Cómo se explica la alucinación (voces impuestas)?",
+    a: "Por el fracaso de la <b>separación</b> (C4): lo <b>forcluido de lo simbólico retorna en lo real</b> como alucinación (el Otro perseguidor)." },
+  { clase: "psi", tags: ["psicosis", "trampa"],
+    q: "¿Qué es el 'neurocentrismo' y por qué evitarlo?",
+    a: "Leer al psicótico como un neurótico 'tosco o inacabado'. En cambio hay que <b>recortar la imposibilidad</b> para abrir un campo de posibles (el delirio = intento de restitución)." }
   // ---------------- (las próximas clases agregan acá sus preguntas) ----------------
 ];
 
@@ -231,5 +251,6 @@ window.DESARROLLO = [
   { clase: "c08", ref: "clases/clase-08.html", q: "Desarrollá por qué la compulsión de repetición obliga a un 'más allá del principio de placer' (objeciones, trauma/Bindung, pulsión de muerte, placer ≠ satisfacción)." },
   { clase: "c09", ref: "clases/clase-09.html", q: "Desarrollá cómo se constituye el yo en Freud (narcisismo/ameba, caída del narcisismo infantil → Ideal del yo / conciencia moral, identificación)." },
   { clase: "c10", ref: "clases/clase-10.html", q: "Desarrollá el pasaje de la primera a la segunda tópica (hechos clínicos, el yo inconsciente, la nueva articulación ello/yo/superyó)." },
-  { clase: "c11", ref: "clases/clase-11.html", q: "Desarrollá la teoría del yo de Lacan (estadio del espejo, i(a)/I(A)) como relectura de C9 y C10, y su oposición a la Ego Psychology." }
+  { clase: "c11", ref: "clases/clase-11.html", q: "Desarrollá la teoría del yo de Lacan (estadio del espejo, i(a)/I(A)) como relectura de C9 y C10, y su oposición a la Ego Psychology." },
+  { clase: "psi", ref: "psicosis.html", q: "Desarrollá la psicosis como posición respecto de la estructura, conectando la forclusión del Nombre-del-Padre (C7), el fracaso de la separación (C4) y la cuestión del yo/registros (C11)." }
 ];

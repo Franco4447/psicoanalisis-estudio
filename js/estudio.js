@@ -198,7 +198,8 @@
     ["c08", "8 · Principios del placer", "clases/clase-08.html"],
     ["c09", "9 · Narcisismo y el yo", "clases/clase-09.html"],
     ["c10", "10 · Primera y segunda tópica", "clases/clase-10.html"],
-    ["c11", "11 · Teoría del yo (Lacan)", "clases/clase-11.html"]
+    ["c11", "11 · Teoría del yo (Lacan)", "clases/clase-11.html"],
+    ["psi", "Transversal · Psicosis", "psicosis.html"]
   ];
   function renderDashboard(containerId) {
     var c = document.getElementById(containerId); if (!c) return;
