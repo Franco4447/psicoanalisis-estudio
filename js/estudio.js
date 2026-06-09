@@ -260,7 +260,7 @@
       html += '<div class="q" style="border-left:4px solid var(--accent)"><div class="ask">⭐ ' +
         (short.length + 1) + ". (Desarrollo · " + d.clase.toUpperCase() + ") " + d.q + "</div>" +
         '<details><summary>¿Dónde está la respuesta modelo?</summary>En la pestaña <b>Autoevaluación</b> ' +
-        '(pregunta 8) de <a href="' + d.ref + '">' + d.clase.toUpperCase() + "</a>.</details></div>";
+        '(preguntas integradoras 8–9) de <a href="' + d.ref + '">' + d.clase.toUpperCase() + "</a>.</details></div>";
     }
     c.innerHTML = html;
   }

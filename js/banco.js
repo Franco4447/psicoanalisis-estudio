@@ -21,6 +21,9 @@ window.BANCO = [
   { clase: "c01", tags: ["escuelas"],
     q: "¿Cuál es el acento de cada una de las 3 escuelas pos-freudianas?",
     a: "<b>Americana</b>: el yo adaptativo (rechaza la pulsión de muerte). <b>Inglesa</b>: estadios tempranos, Klein/Winnicott. <b>Francesa</b>: retorno a Freud, el Otro, los registros ISR (Lacan)." },
+  { clase: "c01", tags: ["inconsciente", "lacan", "examen"],
+    q: "¿Cuál es la novedad radical del inconsciente y por qué la 'neutraliza' el psicoanálisis americano?",
+    a: "Radical: el ICC no es el 'no-consciente' descriptivo, sino <b>otra escena</b> con leyes propias que <b>descentra al yo</b>. La Ego Psychology la <b>neutraliza</b> al <b>recentrar todo en el yo</b> (funciones autónomas, adaptación a la realidad). De ahí el <b>'retorno a Freud'</b> de Lacan." },
 
   // ---------------- Clase 2 ----------------
   { clase: "c02", tags: ["sueño"],
@@ -115,6 +118,9 @@ window.BANCO = [
   { clase: "c06", tags: ["articulación", "c08"],
     q: "¿Qué destino de pulsión de C6 anticipa la pulsión de muerte de C8?",
     a: "El <b>masoquismo</b> ('sadismo vuelto hacia el yo') y la vuelta sobre la persona propia; junto con la compulsión de repetición, anticipan el más allá del principio de placer." },
+  { clase: "c06", tags: ["pulsión", "examen"],
+    q: "¿Cuáles son las dos grandes vertientes de la teoría sexual freudiana?",
+    a: "(1) La <b>teoría de la pulsión</b> (Trieb: 4 componentes, contingencia del objeto, 4 destinos) y (2) el <b>desarrollo de la sexualidad infantil</b> (apuntalamiento, fases, perverso polimorfo, diques). Se anudan por fantasía + represión." },
 
   // ---------------- Clase 7 ----------------
   { clase: "c07", tags: ["edipo", "lacan"],
@@ -155,6 +161,9 @@ window.BANCO = [
   { clase: "c08", tags: ["articulación", "c07", "goce"],
     q: "¿Cómo lee Lacan el 'más allá' / el retorno a lo inorgánico?",
     a: "No como muerte biológica (Nirvana, Freud), sino como <b>insistencia del significante</b> y repetición del circuito pulsional alrededor del <b>objeto a</b> → el <b>goce</b>." },
+  { clase: "c08", tags: ["mas-alla", "lacan", "examen"],
+    q: "¿Cómo lee Lacan el 'más allá' desde el lenguaje (automaton / tyché)?",
+    a: "<b>Automaton</b> = insistencia de la cadena significante (lo que 'vuelve siempre al mismo lugar'); <b>tyché</b> = encuentro fallido con lo real (el trauma). <b>El sujeto repite porque está determinado por el significante</b> (enlaza con el S/s de C4)." },
 
   // ---------------- Clase 9 ----------------
   { clase: "c09", tags: ["narcisismo"],
@@ -175,6 +184,9 @@ window.BANCO = [
   { clase: "c09", tags: ["articulación", "c11"],
     q: "¿Qué tesis de C9 anticipa el estadio del espejo de Lacan (C11)?",
     a: "Que el <b>yo es una imagen que viene del Otro</b> (y que antes hay un <b>cuerpo fragmentado</b>): núcleo del estadio del espejo (yo imaginario, alienación)." },
+  { clase: "c09", tags: ["narcisismo", "clínica", "examen"],
+    q: "¿Cuál es la consecuencia clínica decisiva del narcisismo (afecciones narcisistas)?",
+    a: "El <b>límite de la transferencia</b>: en la parafrenia/paranoia la libido <b>se retrae sobre el yo</b> (megalomanía) y no se ofrece a los objetos → Freud distingue <b>neurosis de transferencia</b> (analizables) de <b>afecciones narcisistas</b> (límite de la analizabilidad)." },
 
   // ---------------- Clase 10 ----------------
   { clase: "c10", tags: ["topica"],
@@ -252,5 +264,10 @@ window.DESARROLLO = [
   { clase: "c09", ref: "clases/clase-09.html", q: "Desarrollá cómo se constituye el yo en Freud (narcisismo/ameba, caída del narcisismo infantil → Ideal del yo / conciencia moral, identificación)." },
   { clase: "c10", ref: "clases/clase-10.html", q: "Desarrollá el pasaje de la primera a la segunda tópica (hechos clínicos, el yo inconsciente, la nueva articulación ello/yo/superyó)." },
   { clase: "c11", ref: "clases/clase-11.html", q: "Desarrollá la teoría del yo de Lacan (estadio del espejo, i(a)/I(A)) como relectura de C9 y C10, y su oposición a la Ego Psychology." },
-  { clase: "psi", ref: "psicosis.html", q: "Desarrollá la psicosis como posición respecto de la estructura, conectando la forclusión del Nombre-del-Padre (C7), el fracaso de la separación (C4) y la cuestión del yo/registros (C11)." }
+  { clase: "psi", ref: "psicosis.html", q: "Desarrollá la psicosis como posición respecto de la estructura, conectando la forclusión del Nombre-del-Padre (C7), el fracaso de la separación (C4) y la cuestión del yo/registros (C11)." },
+  // --- Consignas del parcial real (las 4 preguntas tomadas) — respuesta modelo en la pregunta 9 de cada clase ---
+  { clase: "c01", ref: "clases/clase-01.html", q: "¿Cuál es la novedad radical del inconsciente y por qué esa novedad queda neutralizada en el psicoanálisis americano? Fundamentar." },
+  { clase: "c06", ref: "clases/clase-06.html", q: "La teoría sexual freudiana subvierte la concepción de la sexualidad de la época. Argumentá los motivos de esa subversión y referite a las dos grandes vertientes de esa teoría." },
+  { clase: "c08", ref: "clases/clase-08.html", q: "El más allá del principio de placer cuestiona una tradición de 2500 años, pero los argumentos de Freud son clínicos. ¿Cuáles son esos argumentos y cómo queda leído el giro desde la referencia de Lacan al lenguaje?" },
+  { clase: "c09", ref: "clases/clase-09.html", q: "Desarrollá el concepto de narcisismo en Freud y sus consecuencias clínicas. ¿En qué términos lo retoma Lacan?" }
 ];
